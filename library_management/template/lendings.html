@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-semibold mb-6">Lendings</h1>
+    <div class="overflow-x-auto">
+        <table class="min-w-full border rounded-lg">
+            <thead class="bg-gray-100">
+                <tr>
+                    <th class="px-4 py-2">Member</th>
+                    <th class="px-4 py-2">Book</th>
+                    <th class="px-4 py-2">Issue Date</th>
+                    <th class="px-4 py-2">Due Date</th>
+                    <th class="px-4 py-2">Returned</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for lending in lendings reversed %}
+                <tr class="border-t">
+                    <td class="px-4 py-2">{{ lending.member.name }}</td>
+                    <td class="px-4 py-2">{{ lending.book.title }}</td>
+                    <td class="px-4 py-2">{{ lending.issue_date }}</td>
+                    <td class="px-4 py-2">{{ lending.due_date }}</td>
+                    <td class="px-4 py-2">
+                        {% if lending.returned %}
+                            <span class="text-green-600 font-semibold">Yes</span>
+                        {% else %}
+                            <span class="text-red-600 font-semibold">No</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center mt-6">
+        <a href="{% url 'lend_book' %}">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded">
+                Lend a Book
+            </button>
+        </a>
+    </div>
+</div>
+{% endblock %}

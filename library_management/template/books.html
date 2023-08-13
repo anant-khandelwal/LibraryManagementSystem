@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-semibold mb-6">Books</h1>
+    <div class="overflow-x-auto">
+        <table class="min-w-full border rounded-lg">
+            <thead class="bg-gray-100">
+                <tr>
+                    <th class="px-4 py-2">Title</th>
+                    <th class="px-4 py-2">Author</th>
+                    <th class="px-4 py-2">ISBN</th>
+                    <th class="px-4 py-2">Publisher</th>
+                    <th class="px-4 py-2">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books reversed %}
+                <tr class="border-t">
+                    <td class="px-4 py-2">{{ book.title }}</td>
+                    <td class="px-4 py-2">{{ book.author }}</td>
+                    <td class="px-4 py-2">{{ book.isbn }}</td>
+                    <td class="px-4 py-2">{{ book.publisher }}</td>
+                    <td class="px-4 py-2">{{ book.qty }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center mt-6">
+        <a href="{% url 'add_book' %}">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded">
+                Add Book
+            </button>
+        </a>
+    </div>
+</div>
+{% endblock %}

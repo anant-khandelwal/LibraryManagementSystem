@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-semibold mb-6">Return Book</h1>
+    <div class="flex justify-center">
+        <div class="w-full max-w-md">
+            <form method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                {% csrf_token %}
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="lending">
+                        Select Lending:
+                    </label>
+                    <select name="lending" id="lending" class="w-full border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+                        {% for lending in lendings %}
+                        <option value="{{ lending.id }}">{{ lending.member.name }} - {{ lending.book.title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="text-center mt-4">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded">
+                        Return Book
+                    </button>
+                </div>
+            </form>
+            <div class="text-center mt-4">
+                <a href="{% url 'lendings' %}">
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded">
+                        View Lendings
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

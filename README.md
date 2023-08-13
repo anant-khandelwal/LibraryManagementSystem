@@ -19,13 +19,24 @@ Welcome to the Library Management System repository! This repository contains th
 The Library Management System is a web application built using Django framework. It allows librarians to manage books, members, lendings, returns, and more in an efficient manner. The application provides an intuitive user interface and streamlines library operations.
 
 ## Features
+![image](https://github.com/anant-khandelwal/LibraryManagementSystem/assets/132798996/9738e485-a73d-46a6-ae12-33bfb349beb0)
 
 - Add, view, and edit book records
+  ![image](https://github.com/anant-khandelwal/LibraryManagementSystem/assets/132798996/afc590d9-ba24-46e4-b3fd-55c14cbef26b)
+
 - Manage member information
+  ![image](https://github.com/anant-khandelwal/LibraryManagementSystem/assets/132798996/ba3f35bb-7e96-4798-8968-219ae41fa4d4)
+
 - Track book lendings and returns
+  ![image](https://github.com/anant-khandelwal/LibraryManagementSystem/assets/132798996/67b4663c-48cf-4fa5-af35-68f89dafd2d7)
+
 - Debt management for members with outstanding dues
-- Search functionality to find books by title or author
-- Import books using the Frappe API
+  ![image](https://github.com/anant-khandelwal/LibraryManagementSystem/assets/132798996/44277776-b2e7-4568-88eb-9efd7a3f4784)
+
+- Search functionality to find books by title or author, import books using the Frappe API
+  Link to Frappe API - https://frappe.io/api/method/frappe-library
+  ![image](https://github.com/anant-khandelwal/LibraryManagementSystem/assets/132798996/61350750-a5ac-4af9-bc26-470722826ea5)
+  
 
 ## Getting Started
 

@@ -50,7 +50,8 @@ The Library Management System is a web application built using Django framework.
 1. Access the admin interface at `http://127.0.0.1:8000/admin/` to manage books, members, and lendings.
 2. Use the provided URLs to access different sections of the app (e.g., `http://127.0.0.1:8000/books/`, `http://127.0.0.1:8000/members/`, etc.).
 3. To import books from the Frappe API, use the "Import Book" feature.
-4. Explore and interact with the app as needed.
+   Link to Frappe API - https://frappe.io/api/method/frappe-library
+5. Explore and interact with the app as needed.
 
 ## Contributing
 
